@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+
+
+  <h2><%=  name%></h2>
+
+    <p>
+    Senior Year B.Tech Student
+    <span class="email"><%= num%></span>
+    <br>
+    <%=  branch%>
+      <span class="email"><%=  email%></span>
+    <br>
+    <%=  college%>
+  </p>
+
+  <h3>Academic Details</h3>
+
+  <table style="width:100%">
+    <tr>
+      <th>Year</th>
+      <th>Degree</th>
+      <th>Institute</th>
+      <th>Percentage/CGPA</th>
+    </tr>
+    <tr>
+      <td><%=  yearCollege%></td>
+      <td>BTech in <%= branch%></td>
+      <td><%= college %></td>
+      <td><%= cgpaCollege %></td>
+    </tr>
+    <tr>
+      <td><%= yearHschool %></td>
+      <td>Class XII CBSE-AISSCE</td>
+      <td><%= Hschool %></td>
+      <td><%= Hschool_mark %></td>
+    </tr>
+    <tr>
+      <td><%= yearSchool %></td>
+      <td>Class X CBSE-AISSE</td>
+      <td><%= school %></td>
+      <td><%= school_marks %></td>
+    </tr>
+  </table>
+  <h3>Objective</h3>
+  <p><%= objective %></p>
+  <h3> Projects</h3>
+  <ul>
+  <%  var i=0;%>
+  <%  projects.forEach(function(element) {%>
+      <li>
+        <h4><%= element %></h4>
+      </li>
+      <p><%= projectsdet %>[i]</p>
+    <%  i++;%>
+  <%  });%>
+
+  <h3>Computer Skills  </h3>
+<ul>
+  <%skills.forEach(function(element){%>
+    <li>
+      <p><%= element %></p>
+    </li>
+  <%});%>
+
+</ul>
+<h3>Extra Curricular Activities</h3>
+<ul>
+<%  extraActivity.forEach(function(element){%>
+    <li>
+      <p><%= element %></p>
+    </li>
+  <%});%>
+</ul>
+</body>
+
+</html>
